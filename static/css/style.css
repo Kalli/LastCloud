@@ -1,0 +1,314 @@
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font: 16px/26px Helvetica, Helvetica Neue, Arial, sans-serif;
+  text-align:center;
+}
+a:hover, a:active { outline: none; text-decoration:none;}
+a:hover { color: #397075; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+a { color: #006966; text-decoration:none; }
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 20px/30px;
+	font-size:30px;
+	padding: 0;
+}
+
+h1 {
+	font-size: 24px;
+	line-height: 28px;
+}
+
+h2 {
+	font-size: 16px;
+	line-height: 12px;
+	margin: 0 0 0 0;
+}
+h3 {
+  font-size: 10px;
+  line-height:8px;
+}
+
+/* search form styling */
+.usernameform {
+  width:600px;
+  margin: 50px auto;
+}
+
+.usernameform p {
+  display: inline;
+  padding: 10px,0,10px,0;
+}
+
+.usernameform  h2{
+  text-align:center;
+}
+
+
+
+/* navigation styling */
+.progress-bar {
+  width: 100%;
+  margin: 10px auto;
+  text-align:center;
+  vertical-align:bottom;
+}
+
+.step {
+    color: #397075;
+}
+
+.active {
+  color:#000000;
+}
+
+.active a{
+  color:#000000;
+}
+
+.progress-bar div{
+  overflow: auto;
+  display: inline;
+  background: none repeat scroll 0 0 #93C3C8;
+  padding: 5px;
+  text-align:center;
+}
+
+.pagination {
+  width:100%;
+  text-align:center;
+}
+
+#container  {
+  position: relative;
+  margin:0 auto !important;
+}
+
+.footer{
+  width: 100%;
+  margin: 20px auto;
+  font-size:12px/18px;
+  text-align:center;
+  display: block;
+}
+.footer a{
+  text-decoration: none;
+}
+
+
+/* artist styling */
+
+.artist {
+  width: 252px;
+  margin: 0px;
+  float: left;
+}
+.artist div img {
+    position: relative;
+    z-index: 1;
+}
+.artist div.active h2 {
+    
+    opacity: 0.9;
+    z-index: 3;
+}
+.artist div h2{
+  
+  text-align: center;
+	font-size: 100%;
+	line-height: 1;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 1em;
+}
+.artist div h2 {
+    
+    background: none repeat scroll 0 0 #397075;
+    opacity: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display:none;
+}
+.artist div:hover h2 {
+    
+    display: block;
+    opacity: 0.9;
+    z-index: 20;
+}
+.artist div h2 a{
+    color: #000 !important;
+    font-size: 20px !important;
+    font-weight: normal;
+    padding: 0px;
+    text-decoration: none;
+    font: 18px/26px Georgia, "Times New Roman", Times;
+}
+.artist div:hover h2 {
+    
+    display: block;
+    opacity: 0.9;
+    z-index: 20;
+}
+
+.artist div.active h3 {
+    
+    opacity: 0.9;
+    z-index: 3;
+}
+.artist div h3 {
+  
+  text-align: center;
+	font-size: 100%;
+	line-height: 1;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 1em;
+}
+.artist div h3  {
+    
+    background: none repeat scroll 0 0 #F0F7F7;
+    opacity: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display:none;
+}
+.artist div:hover h3  {
+    
+    display: block;
+    opacity: 0.9;
+    z-index: 20;
+}
+.artist div h3 a{
+    color: #000 !important;
+    
+    font-size: 12px !important;
+    font-weight: normal;
+    padding: 0px;
+    text-decoration: none;
+    font: 12px/16px Georgia, "Times New Roman", Times;
+}
+.artist div:hover h3  {
+    
+    display: block;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+
+/* Cloudcasts styling */
+.cloudcast {
+  width: 300px;
+  margin: 0px;
+  float: left;
+}
+
+.cloudcast div img {
+    position: relative;
+    z-index: 1;
+}
+.cloudcast div.active h2 {
+    opacity: 0.9;
+    z-index: 3;
+}
+.cloudcast div h2 {
+  text-align: center;
+	font-size: 100%;
+	line-height: 1;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 1em;
+}
+.cloudcast div h2  {
+    background: none repeat scroll 0 0 #397075;
+    opacity: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display:none;
+}
+.cloudcast div:hover h2  {
+    display: block;
+    opacity: 0.9;
+    z-index: 20;
+}
+.cloudcast div h2 a{
+    color: #000 !important;
+    font-size: 20px !important;
+    font-weight: normal;
+    padding: 0px;
+    text-decoration: none;
+    font: 18px/26px Georgia, "Times New Roman", Times;
+}
+.cloudcast div:hover h2  {
+    display: block;
+    opacity: 0.9;
+    z-index: 20;
+}
+
+
+
+.cloudcast div.active h3 {
+    opacity: 0.9;
+    z-index: 3;
+}
+.cloudcast div h3 {
+  text-align: center;
+	font-size: 100%;
+	line-height: 1;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 1em;
+}
+.cloudcast div h3  {
+    background: none repeat scroll 0 0 #F0F7F7;
+    opacity: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display:none;
+}
+.cloudcast div:hover h3  {
+    display: block;
+    opacity: 0.9;
+    z-index: 20;
+}
+.cloudcast div h3 a{
+    color: #000 !important;
+    font-size: 12px !important;
+    font-weight: normal;
+    padding: 0px;
+    text-decoration: none;
+    font: 12px/16px Georgia, "Times New Roman", Times;
+}
+.cloudcast div:hover h3  {
+    display: block;
+    opacity: 0.9;
+    z-index: 20;
+}
+
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+
+
+

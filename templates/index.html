@@ -1,0 +1,28 @@
+{% include "html_headings" %}
+<head>
+	<title>LastCloud - find mixes, podcasts and radioshows with music from your favourite artists</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css" media="screen" />
+</head>
+<body>
+	<div>
+	<div class="usernameform">
+	<h1>LastCloud</h1> 
+	<p>Find mixes, podcasts and radioshows on <a href="http://www.mixcloud.com" target="blank" title="Mixcloud streams radio shows, Podcasts and DJ mixes legally and on-demand">Mixcloud.com</a> with music from your favourite artists on <a href="http://www.last.fm" title="Last.fm lets you effortlessly keep a record of what you listen to from any player. Based on your taste, Last.fm recommends you more music and concerts!" target="blank">Last.fm</a></p>	
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.2.js" ></script>
+	<form action="/lastcloud/{{ username}}" method="post">{% csrf_token %}
+			<label for="id_username">Last.fm username:</label> 
+			<input id="id_username" type="text" name="username" placeholder="Your username" maxlength="100" />	
+			<input type="submit" value="Go!" />
+	</form>
+	</div>
+	{% include "progress_bar.html" with active="1" %}
+	{% include "footer.html" %}
+	</div>
+<script type="text/javascript">
+		$(document).ready(function() {
+			$("#id_username").focus();
+		});
+</script>
+</body>	
+</html>
+

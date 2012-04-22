@@ -1,0 +1,48 @@
+{% include "html_headings" %}
+</head>
+	<title>LastCloud - Mixcloud Cloudcasts featuring {{artist}}</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css" type="text/css" media="screen" />
+</head>
+<body>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.2.js" ></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.masonry.min.js" ></script>		
+{% include "progress_bar.html" with active="3" %}
+<div class="pagination">
+{% if offset > 2 %}
+	<a href="/lastcloud/mixcloudartist/{{ artist }}/{{ offset|add:"-1" }}">Previous</a> |
+{% endif %}
+	<a href="/lastcloud/mixcloudartist/{{ artist }}/{{ offset|add:"1" }}">Next</a>
+</div>
+{% if mixes %} 
+<h1>{{mixes.name}}</h1>
+<div id="container">
+		{% for mix in mixes.data %}	
+		<div class="cloudcast">
+			<div class="clearfix">
+				<a href="{{ mix.url }}" target="blank"><img height="300" width="300" src="{{ mix.pictures.large }}" alt="{{ mix.name }}"/></a>
+				<h2><a href="{{ mix.url }}" target="blank">{{ mix.name }} </a> by <a href="{{mix.user.url}}" target="blank">{{mix.user.username}}</a></h2>
+				<h3>Tagged as:{% for tag in mix.tags %}<a href="{{tag.url}}" target="blank">{{tag.name}} </a>{% endfor %}</h3>
+			</div>
+		</div>
+    	{% endfor %}
+</div>
+{% else %}
+    <p>No Cloudcasts featuring {{artist}} found</p>
+{% endif %}
+
+	{% include "footer.html" %}
+<script type="text/javascript">
+var $container = $('#container');
+$container.imagesLoaded(function(){
+	$('#container').masonry({
+		itemSelector : '.cloudcast',
+		columnWidth : 300,
+		isFitWidth: true
+	 	
+	});
+});
+</script>
+
+
+</body>	
+</html>

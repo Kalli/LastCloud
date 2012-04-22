@@ -1,0 +1,15 @@
+<div class="progress-bar">    
+	
+	<div class={% if active == "1" %}"step active"{% else %}"step"{% endif %}>
+		{% if lastfm_username %}<a href="/lastcloud/">1. Last.fm user: {{lastfm_username}}</a></div>
+		{% else %}<a href="/lastcloud/">1. Enter Last.fm username</a></div>
+		{% endif %}
+	<div class={% if active == "2" %}"step active"{% else %}"step"{% endif %}> 
+		{% if artistname %}<a href="/lastcloud/lastfmusername/{{ lastFmUsername }}" class="">2. Selected artist: {{ artistname }}</a></div>
+		{% else %}2. Select artist</div>
+		{% endif %}
+	<div class={% if active == "3" %}"step active"{% else %}"step"{% endif %}> 
+		{% if artistname %}3. Listen to cloudcasts featuring: {{ artistname }}</div>
+		{% else %}3. Listen to cloudcasts featuring the artist.</div>
+		{% endif %}
+</div>
