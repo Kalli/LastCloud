@@ -24,14 +24,13 @@
 	<h1>Top artists for <a href="http://www.last.fm">Last.fm</a> user <a href="http://www.last.fm/user/{{ lastfm_username }}">{{ lastfm_username }}</a></h1>
 <div id="container">
 	 {% for artist in artists.topartists.artist %}
-		<div class="artist">		
+		<div class="artist">	
 				<div class="clearfix">		
 					<a href="/lastcloud/mixcloudartist/{{artist.name|slugify}}/?lastfmusername={{ lastfm_username }}">
 						{% if artist.image.3.text %}<img src="{{artist.image.3.text}}" alt="{{artist.name}}"/>{% else %}<img src="http://cdn.last.fm/flatness/catalogue/noimage/2/default_artist_mega.png" alt="{{artist.name}}"/>{% endif %}
 						</a>
 					<h2><a href="/lastcloud/mixcloudartist/{{artist.name|slugify}}" >{{ artist.name }} - {{ artist.playcount}} plays</a></h2>
-					<h3><a href="/lastcloud/similarartists/{{artist.name|slugify}}" >similar artists</a></h3>
-				</div>
+					<h3><a href="/lastcloud/similarartists/{{artist.name|urlencode}}" >similar artists</a></h3>				</div>
 		</div>
  	{% endfor %}
 {% else %}

@@ -10,8 +10,7 @@
 	<p>Find mixes, podcasts and radioshows on <a href="http://www.mixcloud.com" target="blank" title="Mixcloud streams radio shows, Podcasts and DJ mixes legally and on-demand">Mixcloud.com</a> with music from your favourite artists on <a href="http://www.last.fm" title="Last.fm lets you effortlessly keep a record of what you listen to from any player. Based on your taste, Last.fm recommends you more music and concerts!" target="blank">Last.fm</a></p>	
 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.2.js" ></script>
 	<form action="/lastcloud/{{ username}}" method="post">{% csrf_token %}
-			<label for="id_username">Last.fm username:</label> 
-			<input id="id_username" type="text" name="username" placeholder="Your username" maxlength="100" />	
+			{{form.as_p}}
 			<input type="submit" value="Go!" />
 	</form>
 	</div>

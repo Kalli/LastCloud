@@ -14,6 +14,6 @@ urlpatterns = patterns('lastcloud.views',
   # get last.fm data
   url('lastfmusername/(?P<lastfm_username>\w+)/$', 'get_lastfm_users_topartists'),
   url('lastfmusername/(?P<lastfm_username>\w+)/(?P<page>\d)', 'get_lastfm_users_topartists'),
-  url('similarartists/(?P<artistname>[\w | -]+)[/]$', 'get_lastfm_similar_artists'),
-  url('similarartists/(?P<artistname>[\w | -]+)[/](?P<page>\d)', 'get_lastfm_similar_artists')
+  url('similarartists/(?P<artistname>[\w | - | + | (%20) | &]+)[/]$', 'get_lastfm_similar_artists'),
+  url('similarartists/(?P<artistname>[\w | - | + | (%20) | &]+)[/](?P<page>\d)', 'get_lastfm_similar_artists')
   )

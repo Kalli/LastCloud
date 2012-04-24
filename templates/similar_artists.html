@@ -9,12 +9,12 @@
 			{% include "progress_bar.html" with active="2" %}
 			<div class="pagination">
 			{% if page > 1 %}
-				<a href="/lastcloud/similarartists/{{ artistname|slugify }}/{{ page|add:"-1" }}">Previous</a> |
+				<a href="/lastcloud/similarartists/{{ artistname }}/{{ page|add:"-1" }}">Previous</a> |
 			{% endif %}
-				<a href="/lastcloud/similarartists/{{ artistname|slugify }}/{{ page|add:"1" }}">Next</a>
+				<a href="/lastcloud/similarartists/{{ artistname }}/{{ page|add:"1" }}">Next</a>
 			</div>
 {% if artists %}
-	<h1>Artists similar to <a href="http://www.last.fm/user/{{ artist }}">{{ artistname }}</a></h1>
+	<h1>Artists similar to <a href="http://www.last.fm/music/{{artistname}}" target="blank">{{ artistname|escape }}</a></h1>
 <div id="container">
 	 {% for artist in artists.similarartists.artist %}
 		<div class="artist">		
@@ -23,7 +23,7 @@
 						{% if artist.image.3.text %}<img src="{{artist.image.3.text}}" alt="{{artist.name}}"/>{% else %}<img src="http://cdn.last.fm/flatness/catalogue/noimage/2/default_artist_mega.png" alt="{{artist.name}}"/>{% endif %}
 						</a>
 					<h2><a href="/lastcloud/mixcloudartist/{{artist.name|slugify}}" >{{ artist.name }} </a></h2>
-					<h3><a href="/lastcloud/similarartists/{{artist.name|slugify}}" >similar artists</a></h3>
+					<h3><a href="/lastcloud/similarartists/{{artist.name|urlencode}}" >similar artists</a></h3>
 				</div>
 		</div>
  	{% endfor %}
