@@ -9,12 +9,12 @@
 		<script type="text/javascript" src="{{ STATIC_URL }}js/lfmmasonry.js" ></script>
 			{% include "progress_bar.html" with active="2" %}
 {% if artists %}
-	<h1>Artists similar to <a href="http://www.last.fm/music/{{artistname}}" target="blank">{{ artistname|escape }}</a></h1>
+	<h1>Top artists on Last.fm</a></h1>
 <div id="container">
-	 {% for artist in artists.similarartists.artist %}
+	 {% for artist in artists.artists.artist %}
 		<div class="artist">		
 				<div class="clearfix">		
-					<a href="/lastcloud/mixcloudartist/{{artist.name|slugify}}/?lastfmusername={{ lastFmUsername }}">
+					<a href="/lastcloud/mixcloud/artist/{{artist.name|slugify}}/?lastfmusername={{ lastFmUsername }}">
 						{% if artist.image.3.text %}<img src="{{artist.image.3.text}}" alt="{{artist.name}}"/>{% else %}<img src="http://cdn.last.fm/flatness/catalogue/noimage/2/default_artist_mega.png" alt="{{artist.name}}"/>{% endif %}
 						</a>
 					<h2><a href="/lastcloud/mixcloud/artist/{{artist.name|slugify}}" >{{ artist.name }} </a></h2>

@@ -25,6 +25,7 @@ h6 {
 }
 
 h1 {
+  padding:10px;
 	font-size: 24px;
 	line-height: 28px;
 }
@@ -42,12 +43,26 @@ h3 {
 /* search form styling */
 .usernameform {
   width:600px;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
-.usernameform p {
+.artistsform {
+  width:600px;
+  margin: 30px auto;
+}
+
+.usernameform p{
   display: inline;
   padding: 10px,0,10px,0;
+}
+
+.artistsform p{
+  display: inline;
+  padding: 10px,0,10px,0;
+}
+
+.artistsform {
+  display: none;
 }
 
 .usernameform  h2{
@@ -65,7 +80,7 @@ h3 {
 }
 
 .step {
-    color: #397075;
+  color: #397075;
 }
 
 .active {
@@ -114,13 +129,13 @@ h3 {
   float: left;
 }
 .artist div img {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 .artist div.active h2 {
-    
-    opacity: 0.9;
-    z-index: 3;
+  
+  opacity: 0.9;
+  z-index: 3;
 }
 .artist div h2{
   
@@ -132,40 +147,40 @@ h3 {
 	padding: 0 1em;
 }
 .artist div h2 {
-    
-    background: none repeat scroll 0 0 #397075;
-    opacity: 0;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    z-index: 2;
-    display:none;
+  
+  background: none repeat scroll 0 0 #397075;
+  opacity: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display:none;
 }
 .artist div:hover h2 {
-    
-    display: block;
-    opacity: 0.9;
-    z-index: 20;
+  
+  display: block;
+  opacity: 0.9;
+  z-index: 20;
 }
 .artist div h2 a{
-    color: #000 !important;
-    font-size: 20px !important;
-    font-weight: normal;
-    padding: 0px;
-    text-decoration: none;
-    font: 18px/26px Georgia, "Times New Roman", Times;
+  color: #000 !important;
+  font-size: 20px !important;
+  font-weight: normal;
+  padding: 0px;
+  text-decoration: none;
+  font: 18px/26px Georgia, "Times New Roman", Times;
 }
 .artist div:hover h2 {
-    
-    display: block;
-    opacity: 0.9;
-    z-index: 20;
+  
+  display: block;
+  opacity: 0.9;
+  z-index: 20;
 }
 
 .artist div.active h3 {
-    
-    opacity: 0.9;
-    z-index: 3;
+  
+  opacity: 0.9;
+  z-index: 3;
 }
 .artist div h3 {
   
@@ -177,35 +192,35 @@ h3 {
 	padding: 0 1em;
 }
 .artist div h3  {
-    
-    background: none repeat scroll 0 0 #F0F7F7;
-    opacity: 0;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    z-index: 2;
-    display:none;
+  
+  background: none repeat scroll 0 0 #F0F7F7;
+  opacity: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display:none;
 }
 .artist div:hover h3  {
-    
-    display: block;
-    opacity: 0.9;
-    z-index: 20;
+  
+  display: block;
+  opacity: 0.9;
+  z-index: 20;
 }
 .artist div h3 a{
-    color: #000 !important;
-    
-    font-size: 12px !important;
-    font-weight: normal;
-    padding: 0px;
-    text-decoration: none;
-    font: 12px/16px Georgia, "Times New Roman", Times;
+  color: #000 !important;
+  
+  font-size: 12px !important;
+  font-weight: normal;
+  padding: 0px;
+  text-decoration: none;
+  font: 12px/16px Georgia, "Times New Roman", Times;
 }
 .artist div:hover h3  {
-    
-    display: block;
-    opacity: 0.9;
-    z-index: 2;
+  
+  display: block;
+  opacity: 0.9;
+  z-index: 2;
 }
 
 
@@ -217,12 +232,12 @@ h3 {
 }
 
 .cloudcast div img {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 .cloudcast div.active h2 {
-    opacity: 0.9;
-    z-index: 3;
+  opacity: 0.9;
+  z-index: 3;
 }
 .cloudcast div h2 {
   text-align: center;
@@ -233,38 +248,38 @@ h3 {
 	padding: 0 1em;
 }
 .cloudcast div h2  {
-    background: none repeat scroll 0 0 #397075;
-    opacity: 0;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    z-index: 2;
-    display:none;
+  background: none repeat scroll 0 0 #397075;
+  opacity: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display:none;
 }
 .cloudcast div:hover h2  {
-    display: block;
-    opacity: 0.9;
-    z-index: 20;
+  display: block;
+  opacity: 0.9;
+  z-index: 20;
 }
 .cloudcast div h2 a{
-    color: #000 !important;
-    font-size: 20px !important;
-    font-weight: normal;
-    padding: 0px;
-    text-decoration: none;
-    font: 18px/26px Georgia, "Times New Roman", Times;
+  color: #000 !important;
+  font-size: 20px !important;
+  font-weight: normal;
+  padding: 0px;
+  text-decoration: none;
+  font: 18px/26px Georgia, "Times New Roman", Times;
 }
 .cloudcast div:hover h2  {
-    display: block;
-    opacity: 0.9;
-    z-index: 20;
+  display: block;
+  opacity: 0.9;
+  z-index: 20;
 }
 
 
 
 .cloudcast div.active h3 {
-    opacity: 0.9;
-    z-index: 3;
+  opacity: 0.9;
+  z-index: 3;
 }
 .cloudcast div h3 {
   text-align: center;
@@ -275,31 +290,31 @@ h3 {
 	padding: 0 1em;
 }
 .cloudcast div h3  {
-    background: none repeat scroll 0 0 #F0F7F7;
-    opacity: 0;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    z-index: 2;
-    display:none;
+  background: none repeat scroll 0 0 #F0F7F7;
+  opacity: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display:none;
 }
 .cloudcast div:hover h3  {
-    display: block;
-    opacity: 0.9;
-    z-index: 20;
+  display: block;
+  opacity: 0.9;
+  z-index: 20;
 }
 .cloudcast div h3 a{
-    color: #000 !important;
-    font-size: 12px !important;
-    font-weight: normal;
-    padding: 0px;
-    text-decoration: none;
-    font: 12px/16px Georgia, "Times New Roman", Times;
+  color: #000 !important;
+  font-size: 12px !important;
+  font-weight: normal;
+  padding: 0px;
+  text-decoration: none;
+  font: 12px/16px Georgia, "Times New Roman", Times;
 }
 .cloudcast div:hover h3  {
-    display: block;
-    opacity: 0.9;
-    z-index: 20;
+  display: block;
+  opacity: 0.9;
+  z-index: 20;
 }
 
 

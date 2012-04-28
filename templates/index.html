@@ -1,19 +1,32 @@
-{% include "html_headings" %}
+{% include "html_headings.html" %}
 <head>
 	<title>LastCloud - find mixes, podcasts and radioshows with music from your favourite artists</title>
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.7.2.js" ></script>
 </head>
 <body>
 	<div>
-	<div class="usernameform">
+	<div class="instructions">
 	<h1>LastCloud</h1> 
 	<p>Find mixes, podcasts and radioshows on <a href="http://www.mixcloud.com" target="blank" title="Mixcloud streams radio shows, Podcasts and DJ mixes legally and on-demand">Mixcloud.com</a> with music from your favourite artists on <a href="http://www.last.fm" title="Last.fm lets you effortlessly keep a record of what you listen to from any player. Based on your taste, Last.fm recommends you more music and concerts!" target="blank">Last.fm</a></p>	
-	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.2.js" ></script>
-	<form action="/lastcloud/{{ username}}" method="post">{% csrf_token %}
-			{{form.as_p}}
+	</div>
+	<div class="usernameform">
+		Enter your Last.fm username and select a time period:
+	<form action="" method="post">{% csrf_token %}
+			{{userform.as_p}}
 			<input type="submit" value="Go!" />
 	</form>
+	<a href="javascript:$('.artistsform').show('2');$('.usernameform').hide('2');">Don't have a Last.fm account?</a>
 	</div>
+	</div>
+	<div class="artistsform">
+		Find Cloudcasts from <a href="/lastcloud/lastfm/topartists/">the most played artists on Last.fm</a> or from an artist you like:
+		<form action="" method="post">{% csrf_token %}
+				{{artistform.as_p}}
+				<input type="submit" value="Go!" />
+		</form>
+	<a href="javascript:$('.artistsform').hide('2');$('.usernameform').show('2');">Use an Last.fm username</a>	
+	</div>	
 	{% include "progress_bar.html" with active="1" %}
 	{% include "footer.html" %}
 	</div>

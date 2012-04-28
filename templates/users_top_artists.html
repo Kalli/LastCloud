@@ -1,18 +1,12 @@
-{% include "html_headings" %}
+{% include "html_headings.html" %}
 <head>
 	<title>LastCloud - top artists for {{lastfm_username}}</title>
 	<link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css" type="text/css" media="screen" />	
-	<style type="text/css" >
-		.artist {
-		  width: 252px;
-		  margin: 0px;
-		  float: left;
-		}
-	</style>
 </head>
 <body>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.2.js" ></script>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.masonry.min.js" ></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.7.2.js" ></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery.masonry.min.js" ></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/lfmmasonry.js" ></script>
 			{% include "progress_bar.html" with active="2" %}
 			<div class="pagination">
 			{% if page > 1 %}
@@ -29,27 +23,14 @@
 					<a href="/lastcloud/mixcloudartist/{{artist.name|slugify}}/?lastfmusername={{ lastfm_username }}">
 						{% if artist.image.3.text %}<img src="{{artist.image.3.text}}" alt="{{artist.name}}"/>{% else %}<img src="http://cdn.last.fm/flatness/catalogue/noimage/2/default_artist_mega.png" alt="{{artist.name}}"/>{% endif %}
 						</a>
-					<h2><a href="/lastcloud/mixcloudartist/{{artist.name|slugify}}" >{{ artist.name }} - {{ artist.playcount}} plays</a></h2>
-					<h3><a href="/lastcloud/similarartists/{{artist.name|urlencode}}" >similar artists</a></h3>				</div>
+					<h2><a href="/lastcloud/mixcloud/artist/{{artist.name|slugify}}" >{{ artist.name }} - {{ artist.playcount}} plays</a></h2>
+					<h3><a href="/lastcloud/lastfm/artist/{{artist.name|urlencode}}/similar" >similar artists</a></h3></div>
 		</div>
  	{% endfor %}
 {% else %}
     <p>No last.fm user with the name {{ lastfm_username }} or no artists found.</p>
 {% endif %}
 </div>	
-	
-
-<script type="text/javascript">
-		var $container = $('#container');
-	$container.imagesLoaded(function(){	
-	  $('#container').masonry({
-	    // options
-	    	itemSelector : '.artist',
-		 	columnWidth : 252,
-		 	isFitWidth: true
-	  });
-	});
-</script>
 
 {% include "footer.html" %}
 </body>
