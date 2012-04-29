@@ -10,9 +10,9 @@
 {% include "progress_bar.html" with active="3" %}
 <div class="pagination">
 {% if offset > 2 %}
-	<a href="/lastcloud/mixcloudartist/{{ artist }}/{{ offset|add:"-1" }}">Previous</a> |
+	<a href="/lastcloud/mixcloud/artist/{{ artist }}/{{ offset|add:"-1" }}">Previous</a> |
 {% endif %}
-	<a href="/lastcloud/mixcloudartist/{{ artist }}/{{ offset|add:"1" }}">Next</a>
+	<a href="/lastcloud/mixcloud/artist/{{ artist }}/{{ offset|add:"1" }}">Next</a>
 </div>
 {% if mixes %} 
 <h1>{{mixes.name}}</h1>

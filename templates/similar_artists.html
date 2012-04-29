@@ -14,7 +14,7 @@
 	 {% for artist in artists.similarartists.artist %}
 		<div class="artist">		
 				<div class="clearfix">		
-					<a href="/lastcloud/mixcloudartist/{{artist.name|slugify}}/?lastfmusername={{ lastFmUsername }}">
+					<a href="/lastcloud/mixcloud/artist/{{artist.name|slugify}}/?lastfmusername={{ lastFmUsername }}">
 						{% if artist.image.3.text %}<img src="{{artist.image.3.text}}" alt="{{artist.name}}"/>{% else %}<img src="http://cdn.last.fm/flatness/catalogue/noimage/2/default_artist_mega.png" alt="{{artist.name}}"/>{% endif %}
 						</a>
 					<h2><a href="/lastcloud/mixcloud/artist/{{artist.name|slugify}}" >{{ artist.name }} </a></h2>
