@@ -1,12 +1,13 @@
 {% include "html_headings.html" %}
 <head>
 	<title>LastCloud - artists similar to {{artist}}</title>
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css" type="text/css" media="screen" />	
+	<link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="{{ STATIC_URL }}js/googleanalytics.js" ></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.7.2.js" ></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery.masonry.min.js" ></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/lfmmasonry.js" ></script>	
 </head>
 <body>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.7.2.js" ></script>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery.masonry.min.js" ></script>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/lfmmasonry.js" ></script>
 			{% include "progress_bar.html" with active="2" %}
 {% if artists %}
 	<h1>Top artists on Last.fm</a></h1>

@@ -2,11 +2,11 @@
 </head>
 	<title>LastCloud - Mixcloud Cloudcasts featuring {{artist}}</title>
 	<link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css" type="text/css" media="screen" />
-</head>
-<body>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.7.2.js" ></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery.masonry.min.js" ></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/mcmasonry.js"></script>
+</head>
+<body>
 {% include "progress_bar.html" with active="3" %}
 <div class="pagination">
 {% if offset > 2 %}
